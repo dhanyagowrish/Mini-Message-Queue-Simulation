@@ -8,7 +8,7 @@ import java.util.List;
  * Message Queue
  * create topic
  * Publish Message to appropriate topic
- * Add a subscriber to a topic
+ * Add a subscriber to a topic - polling subscriber or fan-out subscriber
  * Simulate disconnect of a subscriber to a topic
  */
 import java.util.UUID;
@@ -118,20 +118,22 @@ public class MessageQueue {
 		new Thread(task).start();
 		
 	}
-}
 	
-	
-	/*public List<String> get_all_topics()
+	public List<String> get_all_topics()
 	{
-		List<String> topics = new ArrayList<>();
+		List<String> topics_names = new ArrayList<>();
 		
 		for(TopicEndpoint t : topic_endpoints)
 		{
-			topics.add(t.getTopic().getName());
+			topics_names.add(t.getTopic().getName());
 		}
 		
-		return topics;
-	} */
+		return topics_names;
+	} 
+	
+}
+	
+	
 	
 	
 	
